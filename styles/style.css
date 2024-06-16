@@ -19,8 +19,7 @@
   list-style: circle;
 }
 
-.header__links-list-item_no-bullit {
-  letter-spacing: 0;
+.list-item-no-bullit {
   list-style: none;
 }
 
@@ -30,24 +29,24 @@
 }
 
 .address {
+  display: flex;
+  flex-direction: column;
   justify-self: center;
   padding-left: 11px;
   line-height: 24.3px;
   letter-spacing: 0.01em;
 }
 
-.address ul {
-  list-style: none;
-}
-
-.custom-underline a {
+.link-custom-underline {
+  flex-grow: 0;
+  flex-basis: auto;
   border-bottom: 1px solid #000000;
   text-decoration: none;
 }
 
 .cover {
   position: relative;
-  height: 757px;
+  min-height: 757px;
   margin-top: 96px;
   margin-bottom: 179px;
   padding: 165px 50px 51px;
@@ -123,9 +122,8 @@
 }
 
 .bet-button {
-  width: 256px;
-  height: 51px;
   border: 1px solid #fff;
+  padding: 12px 32px 11px 31px;
   color: #fff;
   font-weight: 500;
   font-size: 22px;
@@ -152,13 +150,11 @@
 .lots__card-list {
   display: flex;
   flex-wrap: wrap;
-  
-  justify-content: space-between;
+  gap: 25px;
   margin-bottom: 30px;
-  list-style: none;
 }
 
-.lots__card-list a {
+.link-none-underline {
   text-decoration: none;
 }
 
@@ -170,11 +166,13 @@
   width: 334px;
   height: 563px;
   padding: 51px 40px 48px;
+  background-position: center;
+  background-size: cover;
 }
 
-.card h3 {
+.card_title {
   position: relative;
-  color: #ffffff;
+  color: #fff;
   font-weight: 700;
   font-size: 22px;
   text-decoration-line: underline;
@@ -183,9 +181,9 @@
   text-transform: uppercase;
 }
 
-.card p {
+.card__description {
   position: relative;
-  color: #ffffff;
+  color: #fff;
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
@@ -193,20 +191,14 @@
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .see-more-link {
@@ -282,16 +274,11 @@
   letter-spacing: 0.01em;
 }
 
-.footer__address-list {
-  list-style: none;
-}
-
 .footer__social-list {
   display: flex;
   justify-content: flex-end;
   gap: 48px;
   align-self: flex-start;
-  list-style: none;
 }
 
 .footer__social-icon {
@@ -310,5 +297,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style: none;
 }
