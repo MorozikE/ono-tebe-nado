@@ -38,9 +38,15 @@
 }
 
 .link-custom-underline {
-  flex-grow: 0;
+  /* flex-grow: 0;
   flex-basis: auto;
   border-bottom: 1px solid #000000;
+  text-decoration: none; */
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+.link-no-underline {
   text-decoration: none;
 }
 
@@ -165,7 +171,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 334px;
-  height: 563px;
+  min-height: 563px;
   padding: 51px 40px 48px;
   background-position: center;
   background-size: cover;
@@ -269,6 +275,8 @@
 }
 
 .footer__address {
+  display: flex;
+  flex-direction: column;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
